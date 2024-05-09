@@ -47,6 +47,12 @@ public class Cuenta {
         this.saldo = saldo;
     }
 
+    public String afterTakeOut(Integer cents){
+        this.saldo-=cents;
+        Accesdb.modifica(String.format(Accesdb.newAmount,this.saldo));
+        return getMoneyString(this.saldo);
+    }
+
     public static int getCents(String moneyString) {
 
         String[] trunk = moneyString.split("\\.");
@@ -69,6 +75,12 @@ public class Cuenta {
         String str= (cents/100)+"."+cant+" €";
         return str;
     }
+    public static Cuenta getCuentaByNum(String num_cta){
+        for (Cuenta cuenta : all) {
+            if(cuenta.getNum_cta().equals(num_cta)) return cuenta;
+        }
+        return null;
+    }
 
     public String getSaldoString(){
         return getMoneyString(this.getSaldo());
@@ -78,7 +90,7 @@ public class Cuenta {
         List<String> accounts = new ArrayList<>();
         for (Cuenta acc : Cuenta.all) {
             if(acc.getNif().equals(nif))
-            accounts.add(acc.getNif());
+            accounts.add(acc.getNum_cta());
         }
         return accounts;
     }

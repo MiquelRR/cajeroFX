@@ -14,6 +14,14 @@ public class Client {
         }
     }
     
+    public static Client valideClient(String nif, String pwd){
+        for (Client client : all) {
+            //el orden importa
+            if(client.getNif().equals(nif) && client.getClave().equals(pwd)) return client;
+        }
+        return null;
+    }
+
     public Client(String nif, String clave, String nombre, String apellidos, String movil) {
         this.nif = nif;
         this.clave = clave;
@@ -59,6 +67,12 @@ public class Client {
     }
     public static Client getLoggedClient() {
         return loggedClient;
+    }
+    public static void setLoggedClient(String nif){
+        for (Client client : all) {
+            if(client.getNif().equals(nif))
+            setLoggedClient(client);
+        }
     }
     public static void setLoggedClient(Client loggedClient) {
         Client.loggedClient = loggedClient;

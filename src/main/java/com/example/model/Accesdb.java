@@ -14,11 +14,13 @@ public class Accesdb {
     private static boolean logMode=false;
     private static LogToFile bbddlog = new LogToFile("queries");
 
-    private final static String bdcon = "jdbc:mysql://localhost:3306/CajeroNOVA";
-    //private final static String bdcon = "jdbc:mysql://localhost:33006/CajeroNOVA";
+    //private final static String bdcon = "jdbc:mysql://localhost:3306/CajeroNOVA";
+    private final static String bdcon = "jdbc:mysql://localhost:33006/CajeroNOVA";
     private final static String us = "root";
     private final static String pw = "root";
-    public final static String distinctVals = "SELECT DISTINCT %d FROM Dinosaurio;";
+    public final static String newAmount = "UPDATE Cuenta SET saldo= %d WHERE NIF ='%s';";
+    public final static String deleteFact = "DELETE FROM Factura WHERE Num_Fra =%d ;";
+
 
 
     //public final static String addEmployee="INSERT INTO empleados (nombre, apellidos, telefono, cargo) VALUES ('-', '-', '-', '-', '-');";

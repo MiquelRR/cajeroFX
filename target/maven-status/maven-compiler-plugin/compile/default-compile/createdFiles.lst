@@ -4,7 +4,6 @@ com/example/model/Factura.class
 com/example/model/Cuenta.class
 com/example/model/LogToFile.class
 com/example/PrimaryController.class
-com/example/SecondaryController.class
 module-info.class
 com/example/loginController.class
 com/example/operationsController.class
