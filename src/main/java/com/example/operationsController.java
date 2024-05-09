@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.example.model.Client;
+import com.example.model.Cuenta;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -22,7 +23,7 @@ public class operationsController {
     private URL location;
 
     @FXML
-    private ChoiceBox<?> account;
+    private ChoiceBox<String> account;
 
     @FXML
     private Label name;
@@ -52,6 +53,7 @@ public class operationsController {
 
     @FXML
     void initialize() {
+        account.getItems().addAll(Cuenta.getClientAccounts("12345679S"));
         assert account != null : "fx:id=\"account\" was not injected: check your FXML file 'operations.fxml'.";
         assert name != null : "fx:id=\"name\" was not injected: check your FXML file 'operations.fxml'.";
         assert payButton != null : "fx:id=\"payButton\" was not injected: check your FXML file 'operations.fxml'.";

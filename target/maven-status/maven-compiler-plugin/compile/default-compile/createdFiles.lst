@@ -1,7 +1,11 @@
+com/example/model/Client.class
 com/example/App.class
+com/example/model/Factura.class
+com/example/model/Cuenta.class
+com/example/model/LogToFile.class
 com/example/PrimaryController.class
 com/example/SecondaryController.class
 module-info.class
-com/example/LogToFile.class
 com/example/loginController.class
 com/example/operationsController.class
+com/example/model/Accesdb.class

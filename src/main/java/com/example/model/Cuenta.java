@@ -74,7 +74,7 @@ public class Cuenta {
         return getMoneyString(this.getSaldo());
     }
 
-    public List<String> getClientAccounts(String nif){
+    public static List<String> getClientAccounts(String nif){
         List<String> accounts = new ArrayList<>();
         for (Cuenta acc : Cuenta.all) {
             if(acc.getNif().equals(nif))

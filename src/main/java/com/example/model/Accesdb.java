@@ -14,8 +14,8 @@ public class Accesdb {
     private static boolean logMode=false;
     private static LogToFile bbddlog = new LogToFile("queries");
 
-    private final static String bdcon = "jdbc:mysql://localhost:3306/cajeroNOVA";
-    //private final static String bdcon = "jdbc:mysql://localhost:33006/cajeroNOVA";
+    private final static String bdcon = "jdbc:mysql://localhost:3306/CajeroNOVA";
+    //private final static String bdcon = "jdbc:mysql://localhost:33006/CajeroNOVA";
     private final static String us = "root";
     private final static String pw = "root";
     public final static String distinctVals = "SELECT DISTINCT %d FROM Dinosaurio;";
