@@ -1,0 +1,7 @@
+com/example/App.class
+com/example/PrimaryController.class
+com/example/SecondaryController.class
+module-info.class
+com/example/LogToFile.class
+com/example/loginController.class
+com/example/operationsController.class
