@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cuenta {
+    LogToFile log = new LogToFile("cuenta");
     private static List<Cuenta> all = new ArrayList<>();
     static {
         List<String[]> taula = Accesdb.lligTaula("Cuenta");
@@ -49,7 +50,10 @@ public class Cuenta {
 
     public String afterTakeOut(Integer cents){
         this.saldo-=cents;
-        Accesdb.modifica(String.format(Accesdb.newAmount,this.saldo));
+        String sd=getMoneyString(this.saldo);
+        String sd2=sd.substring(0,sd.length()-2);
+        log.log(String.format(Accesdb.newAmount,sd2,this.nif));
+        Accesdb.modifica(String.format(Accesdb.newAmount,sd2,this.nif));
         return getMoneyString(this.saldo);
     }
 

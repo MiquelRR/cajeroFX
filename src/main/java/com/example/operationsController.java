@@ -66,44 +66,46 @@ public class operationsController {
             ChoiceDialog<String> dialog = new ChoiceDialog<>(choices.get(0), choices);
             dialog.setTitle("Pagar Factura");
             dialog.setHeaderText("Saldo disponible: " + cta.getSaldoString() + "\n Elija la Factura a pagar :");
-            dialog.setContentText("Facturas: ");
+            dialog.setContentText("Facturas: " + choices.size());
             Optional<String> result = dialog.showAndWait();
             if (result.isPresent()) {
                 res = result.get();
             }
-        }
-        Factura fac = Factura.getFactByNum(res);
-        if (fac.getImporte() <= cta.getSaldo()) {
-            Alert alert = new Alert(AlertType.CONFIRMATION);
-            alert.setTitle("Pagar Factura");
-            alert.setHeaderText("Saldo disponible: " + cta.getSaldoString() +
-                    "\n La factura núm: " + fac.getNum_fra() +
-                    "\n Tiene un importe de: " + fac.getImporteString());
 
-            alert.setContentText("¿desea pagar la factura?");
-            ButtonType buttonTypeOne = new ButtonType("PAGAR");
-            ButtonType buttonTypeCancel = new ButtonType("NO ME VIENE BIEN", ButtonData.CANCEL_CLOSE);
-            alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeCancel);
-            Optional<ButtonType> result = alert.showAndWait();
-            if (result.isPresent()) {
-                if (result.get() == buttonTypeOne) {
-                    alert = new Alert(AlertType.INFORMATION); // WARNING, ERROR
-                    alert.setTitle("Pagar Factura");
-                    alert.setHeaderText("Mensaje"); // ó null si no queremos cabecera
-                    alert.setContentText("OPERACION REALIZADA\n su nuevo saldo es "+cta.afterTakeOut(fac.getImporte()));
-                    alert.showAndWait();
-                    Factura.delete(fac.getNum_fra().toString(0));
-                } else {
-                    System.out.println("ESTO CREO QUENO SE EJECUTA NUNCA");
+            Factura fac = Factura.getFactByNum(res);
+            if (fac.getImporte() <= cta.getSaldo()) {
+                Alert alert = new Alert(AlertType.CONFIRMATION);
+                alert.setTitle("Pagar Factura");
+                alert.setHeaderText("Saldo disponible: " + cta.getSaldoString() +
+                        "\n La factura núm: " + fac.getNum_fra() +
+                        "\n Tiene un importe de: " + fac.getImporteString());
+
+                alert.setContentText("¿desea pagar la factura?");
+                ButtonType buttonTypeOne = new ButtonType("PAGAR");
+                ButtonType buttonTypeCancel = new ButtonType("NO ME VIENE BIEN", ButtonData.CANCEL_CLOSE);
+                alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeCancel);
+                Optional<ButtonType> result2 = alert.showAndWait();
+                if (result2.isPresent()) {
+                    if (result2.get() == buttonTypeOne) {
+                        alert = new Alert(AlertType.INFORMATION); // WARNING, ERROR
+                        alert.setTitle("Pagar Factura");
+                        alert.setHeaderText("Mensaje"); // ó null si no queremos cabecera
+                        alert.setContentText(
+                                "OPERACION REALIZADA\n su nuevo saldo es " + cta.afterTakeOut(fac.getImporte()));
+                        alert.showAndWait();
+                        fac.delete(fac.getNum_fra().toString());
+                    } else {
+                        System.out.println("ESTO CREO QUENO SE EJECUTA NUNCA");
+                    }
                 }
-            }
 
-        } else {            
-                    Alert alert = new Alert(AlertType.WARNING); // WARNING, ERROR
-                    alert.setTitle("Pagar Factura");
-                    alert.setHeaderText("Advertencia"); // ó null si no queremos cabecera
-                    alert.setContentText("No tienes saldo para pagar esta factura");
-                    alert.showAndWait();
+            } else {
+                Alert alert = new Alert(AlertType.WARNING); // WARNING, ERROR
+                alert.setTitle("Pagar Factura");
+                alert.setHeaderText("Advertencia"); // ó null si no queremos cabecera
+                alert.setContentText("No tienes saldo para pagar esta factura");
+                alert.showAndWait();
+            }
         }
     }
 
@@ -131,11 +133,11 @@ public class operationsController {
 
         int cents = 0;
         try {
-            cents = Integer.parseInt(res) * 100;
+            cents = Double.valueOf(Double.parseDouble(res) * 100).intValue();
         } catch (Exception e) {
             cents = 0;
         }
-        if (cents == 0) {
+        if (cents == 0 || cents < 0) {
             res = "No es una cantidad válida " + res;
             ok = false;
         }

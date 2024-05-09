@@ -27,11 +27,13 @@ public class Factura {
         for (int index = 0; index < all.size(); index++) {
              if (Integer.toString(all.get(index).getNum_fra()).equals(num)){ 
 
-                String.format(Accesdb.deleteFact,all.get(index).getNum_fra());
+                String query=String.format(Accesdb.deleteFact,all.get(index).getNum_fra());
+                Accesdb.modifica(query);
                 all.remove(index);
         }
     }
-    }
+    } 
+
 
     public Integer getNum_fra() {
         return num_fra;

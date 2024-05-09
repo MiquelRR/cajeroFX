@@ -1,0 +1,53 @@
+2024-05-09T22:42:27.033624076:Opened filelog cuenta.log
+2024-05-09T22:42:27.033744273:Opened filelog cuenta.log
+2024-05-09T22:42:27.033817575:Opened filelog cuenta.log
+2024-05-09T22:42:27.033879283:Opened filelog cuenta.log
+2024-05-09T22:42:27.033942410:Opened filelog cuenta.log
+2024-05-09T22:42:27.034003589:Opened filelog cuenta.log
+2024-05-09T22:42:27.034077065:Opened filelog cuenta.log
+2024-05-09T22:48:46.020057749:Opened filelog cuenta.log
+2024-05-09T22:48:46.020433861:Opened filelog cuenta.log
+2024-05-09T22:48:46.020726035:Opened filelog cuenta.log
+2024-05-09T22:48:46.021478497:Opened filelog cuenta.log
+2024-05-09T22:48:46.022353972:Opened filelog cuenta.log
+2024-05-09T22:48:46.022499871:Opened filelog cuenta.log
+2024-05-09T22:48:46.022716842:Opened filelog cuenta.log
+2024-05-09T22:48:51.496804310:UPDATE Cuenta SET saldo = 1158.20 WHERE NIF ='12345678Z';
+2024-05-09T22:49:39.398675482:UPDATE Cuenta SET saldo = 1167.20 WHERE NIF ='12345678Z';
+2024-05-09T22:49:50.614848518:UPDATE Cuenta SET saldo = 1022.20 WHERE NIF ='12345678Z';
+2024-05-09T22:53:22.243781582:Opened filelog cuenta.log
+2024-05-09T22:53:22.243872021:Opened filelog cuenta.log
+2024-05-09T22:53:22.243945676:Opened filelog cuenta.log
+2024-05-09T22:53:22.244021101:Opened filelog cuenta.log
+2024-05-09T22:53:22.244093385:Opened filelog cuenta.log
+2024-05-09T22:53:22.244163807:Opened filelog cuenta.log
+2024-05-09T22:53:22.244256435:Opened filelog cuenta.log
+2024-05-09T22:53:29.452018070:UPDATE Cuenta SET saldo = 922.20 WHERE NIF ='12345678Z';
+2024-05-09T22:53:37.824692485:UPDATE Cuenta SET saldo = 922.20 WHERE NIF ='12345678Z';
+2024-05-09T22:53:43.686091520:UPDATE Cuenta SET saldo = 922.20 WHERE NIF ='12345678Z';
+2024-05-09T23:01:54.948720967:Opened filelog cuenta.log
+2024-05-09T23:01:54.948807780:Opened filelog cuenta.log
+2024-05-09T23:01:54.948874661:Opened filelog cuenta.log
+2024-05-09T23:01:54.948939478:Opened filelog cuenta.log
+2024-05-09T23:01:54.949008433:Opened filelog cuenta.log
+2024-05-09T23:01:54.949077456:Opened filelog cuenta.log
+2024-05-09T23:01:54.949177979:Opened filelog cuenta.log
+2024-05-09T23:02:08.299384408:UPDATE Cuenta SET saldo = 3311.78 WHERE NIF ='12345678Z';
+2024-05-09T23:04:16.968411778:Opened filelog cuenta.log
+2024-05-09T23:04:16.968492850:Opened filelog cuenta.log
+2024-05-09T23:04:16.968554425:Opened filelog cuenta.log
+2024-05-09T23:04:16.968620315:Opened filelog cuenta.log
+2024-05-09T23:04:16.968718511:Opened filelog cuenta.log
+2024-05-09T23:04:16.968783112:Opened filelog cuenta.log
+2024-05-09T23:04:16.968841396:Opened filelog cuenta.log
+2024-05-09T23:04:33.727801588:UPDATE Cuenta SET saldo = 3311.78 WHERE NIF ='12345678Z';
+2024-05-09T23:10:28.124372029:Opened filelog cuenta.log
+2024-05-09T23:10:28.124478896:Opened filelog cuenta.log
+2024-05-09T23:10:28.124573955:Opened filelog cuenta.log
+2024-05-09T23:10:28.124635284:Opened filelog cuenta.log
+2024-05-09T23:10:28.124700654:Opened filelog cuenta.log
+2024-05-09T23:10:28.124786898:Opened filelog cuenta.log
+2024-05-09T23:10:28.124847860:Opened filelog cuenta.log
+2024-05-09T23:10:33.380938027:UPDATE Cuenta SET saldo = 3311.78 WHERE NIF ='12345678Z';
+2024-05-09T23:10:45.847158299:UPDATE Cuenta SET saldo = 3209.48 WHERE NIF ='12345678Z';
+2024-05-09T23:11:01.941701973:UPDATE Cuenta SET saldo = 3200.00 WHERE NIF ='12345678Z';
