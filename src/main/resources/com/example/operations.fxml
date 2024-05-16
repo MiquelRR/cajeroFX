@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onDragDetected="#pay" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #00315b;" stylesheets="@own_styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.operationsController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #00315b;" stylesheets="@own_styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.operationsController">
    <children>
       <ImageView fitHeight="53.0" fitWidth="142.0" layoutX="34.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
          <image>
